@@ -4,6 +4,7 @@
 }
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+
 /*pagina index*/
 body {
     background-color: white;
@@ -78,12 +79,19 @@ body {
     background-color: whitesmoke;
     color: black;
 }
+h4 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
 
 footer {
     background-color: black;
     color: white;
     text-align: center;
 }
+
 
 /*Residentes de primer año css*/
 
@@ -100,3 +108,89 @@ footer {
 
 
 }
+/*media modificaciones*/
+@media screen and (max-width: 768px) {
+    /*modificaciones del index*/
+.container{
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr 0,3fr;
+    grid-template-rows: 0,3fr;
+    grid-template-areas: 
+    "logohospital tituloprincipal logohospital2";
+    gap: 0px 0px;
+   grid-auto-flow: row;
+   
+  }
+    
+    
+.tituloprincipal{
+    font-size: 75%;
+}
+
+    
+
+ .container img {
+        display: flex;
+        justify-content: center;
+        width: 45%;
+        height: 45%;
+    }
+
+
+    
+    .Menuprincipal{
+        display: flex;
+        justify-items: center;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 2fr; 
+        grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "menuprincipalfoto1"
+          "menuprincipaltitulo1"
+          "menuprincipalfoto2"
+          "menuprincipaltitulo2"
+          "menuprincipalfoto3"
+          "menuprincipaltitulo3"
+    
+      }
+      
+    .menuprincipal img{
+        width: auto;
+        height: auto;
+        
+    }
+
+    }
+          
+    @media screen and (max-width: 1024px) {
+      
+    
+        .Menuprincipal{
+            display: flex;
+            justify-items: center;
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 2fr; 
+            grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+              "menuprincipalfoto1"
+              "menuprincipaltitulo1"
+              "menuprincipalfoto2"
+              "menuprincipaltitulo2"
+              "menuprincipalfoto3"
+              "menuprincipaltitulo3"
+        
+          }
+          
+        .menuprincipal img{
+            width: auto;
+            height: auto;
+            
+        }
+        
+              }
+    
+    

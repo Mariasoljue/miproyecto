@@ -1,0 +1,102 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/*pagina index*/
+body {
+    background-color: white;
+}
+.Menuprincipal{
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+/*header del index*/
+.container {  
+    display: grid;
+    grid-template-columns: 0.3fr 1.7fr 0,3fr;
+    grid-template-rows: 0,3fr;
+    grid-template-areas: 
+    "logohospital tituloprincipal logohospital2";
+    gap: 0px 0px;
+   grid-auto-flow: row;
+   
+  }
+.tituloprincipal {
+    padding-top: 2rem;
+    text-align: center;
+    background-color: white;
+    font-size: 125%;
+    
+    
+    
+}
+.container img{
+    width: 120px;
+    height: 126px;
+}
+.logohospital2 {
+    display: flex;
+    justify-content: right;
+}
+/*main del index*/
+
+.Menuprincipal{
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 0.3fr 1.7fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "menuprincipalfoto1 menuprincipaltitulo1"
+          "menuprincipalfoto2 menuprincipaltitulo2"
+          "menuprincipalfoto3 menuprincipaltitulo3"
+      }
+.Menuprincipal img{
+    width: 180px;
+    height: 210px;
+    border: 3px solid white;
+   }
+
+
+.Menuprincipal a{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 6px;
+    padding: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    
+}
+.Menuprincipal a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/*Residentes de primer año css*/
+
+.mainr1 {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."
+      ". . ."; 
+
+
+}

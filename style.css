@@ -102,7 +102,7 @@ footer {
     grid-template-rows: 1fr 1fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-      ". . ."
+      "mainr1fotos mainr1rotaciones menur1 "
       ". . ."
       ". . ."; 
 

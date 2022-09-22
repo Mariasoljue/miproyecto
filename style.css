@@ -37,6 +37,10 @@ body {
 .container img{
     width: 120px;
     height: 126px;
+    
+}
+.tituloprincipal:hover{
+    transform: scale(2,1);
 }
 .logohospital2 {
     display: flex;
@@ -96,18 +100,90 @@ footer {
 /*Residentes de primer año css*/
 
 .mainr1 {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-items: center;
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-      "mainr1fotos mainr1rotaciones menur1 "
-      ". . ."
-      ". . ."; 
+      "mainr1rotaciones"
+      "calendario "
+
+}
+
+.calendario {
+    animation-duration: 2seg;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+.mainr12 {
+    display: flex;
+    justify-items: center;   
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 2fr; 
+    grid-template-rows: 0,2fr 1fr 0,8fr; 
+    gap: 0px 0px; 
+    grid-template-areas:
+        "titulodemainr12 "
+      "mainr1fotos"
+      "Contenedormenu "
 
 
 }
+
+.mainr1fotos {
+    display: flex;
+    justify-items: flex-start;
+   
+}
+.mainr1fotos img{
+    height: 145px;
+    width: 125px;
+    border: 2px solid white;
+    transition: all 2s;
+
+
+}
+.mainr1fotos img:hover {
+    width: 250px;
+    height: 220px;
+}
+.Contenedormenu ul{
+    display: flex;
+    justify-content: start;
+    background-color: black;
+}
+.Contenedormenu li{
+    border: 2px solid white;
+    text-decoration: none;
+
+}
+.Contenedormenu a{
+    text-decoration: none;
+    color: white;
+    
+}
+.Contenedormenu a:hover{
+    color: black;
+    background-color: grey;
+    
+}
+.Contenedormenu {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+
+
+
+
 /*media modificaciones*/
 @media screen and (max-width: 768px) {
     /*modificaciones del index*/
@@ -161,9 +237,23 @@ footer {
         height: auto;
         
     }
+    
+    /*r1 pagina*/
+    .mainr1rotaciones{
+
+        transform: scale(1.2,1);
 
     }
-          
+    .calendario {
+        transform: scale(1.2,1);
+    }
+    .menupagina{
+        transform: scale(1,1.1);
+    }
+
+    }
+
+
     @media screen and (max-width: 1024px) {
       
     

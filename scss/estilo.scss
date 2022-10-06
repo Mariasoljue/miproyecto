@@ -211,14 +211,16 @@ footer {
    grid-auto-flow: row;
     
     .tituloprincipal{
-    font-size: 25%;
+    font-size: 45%;
     }
 
     img {
-        display: flex;
-        justify-content: center;
         width: 45%;
         height: 45%;
+    }
+    .logohospital2{
+        display: flex;
+        justify-content: end;
     }
  
 }

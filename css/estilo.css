@@ -109,8 +109,8 @@ footer {
     border: 2px solid white;
     transition: all 2s; }
     .mainr1fotos img:hover {
-      width: 250px;
-      height: 220px; }
+      height: 180px;
+      width: 155px; }
 
 .Contenedormenu {
   display: flex;
@@ -136,7 +136,7 @@ footer {
   background-color: #000; }
 
 /* adaptaciones a dispositivos*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 764px) {
   /*modificaciones del index*/
   .container {
     display: grid;
@@ -165,9 +165,12 @@ footer {
     width: auto;
     height: auto; }
   /*r1 pagina*/
+  .mainr1fotos {
+    display: flex;
+    justify-items: center; }
+    .mainr1fotos:hover {
+      border: 2px solid #ffffff; }
   .mainr1rotaciones {
-    transform: scale(1.2, 1); }
-  .calendario {
     transform: scale(1.2, 1); }
   .menupagina {
     transform: scale(1, 1.1); } }

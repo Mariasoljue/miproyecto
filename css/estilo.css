@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -27,25 +26,25 @@ body {
     text-align: center;
     background-color: #ffffff;
     font-size: 125%; }
-    .container .tituloprincipal:hover {
-      transform: scale(2, 1); }
-  .container .logohospital img {
+
+.logohospital img {
+  height: 126px;
+  width: 120px; }
+
+.logohospital2 {
+  text-align: end; }
+  .logohospital2 img {
     height: 126px;
     width: 120px; }
-  .container .logohospital2 {
-    text-align: end; }
-    .container .logohospital2 img {
-      height: 126px;
-      width: 120px; }
 
 .Menuprincipal {
   background-color: black;
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 0.3fr 1.7fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr;
   gap: 0px 0px;
-  grid-template-areas: "menuprincipalfoto1 menuprincipaltitulo1" "menuprincipalfoto2 menuprincipaltitulo2" "menuprincipalfoto3 menuprincipaltitulo3"; }
+  grid-template-areas: "menuprincipalfoto1 menuprincipaltitulo1" "menuprincipalfoto2 menuprincipaltitulo2" "menuprincipalfoto3 menuprincipaltitulo3" "menuprincipalfoto4 menuprincipaltitulo4"; }
 
 .Menuprincipal img {
   width: 180px;
@@ -72,84 +71,42 @@ footer {
   color: white;
   text-align: center; }
 
-/*Residentes de primer año*/
-.mainr1 {
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-items: center;
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "mainr1rotaciones" "calendario "; }
-
-.calendario {
-  animation-duration: 2seg;
-  animation-name: aparecer;
-  animation-iteration-count: infinite; }
-
-.mainr12 {
-  display: flex;
-  justify-items: center;
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 2fr;
-  grid-template-rows: 0,2fr 1fr 0,8fr;
-  gap: 0px 0px;
-  grid-template-areas: "titulodemainr12 " "mainr1fotos" "Contenedormenu "; }
-
-.mainr1fotos {
-  display: flex;
-  justify-items: flex-start; }
-  .mainr1fotos img {
-    height: 145px;
-    width: 125px;
-    border: 2px solid white;
-    transition: all 2s; }
-    .mainr1fotos img:hover {
-      height: 180px;
-      width: 155px; }
-
-.Contenedormenu {
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  color: black; }
-  .Contenedormenu ul {
-    display: flex;
-    justify-content: start;
-    background-color: black; }
-  .Contenedormenu li {
-    border: 2px solid white;
-    text-decoration: none; }
-  .Contenedormenu a {
-    text-decoration: none;
-    color: #ffffff; }
-    .Contenedormenu a:hover {
-      color: #000;
-      background-color: grey; }
-
 /*paginas de segundo y tercero*/
 .Bodyresidentessegundo {
   background-color: #000; }
 
 /* adaptaciones a dispositivos*/
-@media screen and (max-width: 764px) {
+@media (max-width: 1024px) {
+  .Menuprincipal {
+    display: flex;
+    justify-items: center;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0,8fr 0,8fr 0,8fr 0,8fr;
+    gap: 0px 0px;
+    grid-template-areas: "menuprincipalfoto1 menuprincipaltitulo1" "menuprincipalfoto2 menuprincipaltitulo2" "menuprincipalfoto3 menuprincipaltitulo3" "menuprincipalfoto4 menuprincipaltitulo4"; }
+  .Menuprincipal img {
+    width: 1fr;
+    height: 1fr; }
+  .Menuprincipal a {
+    font-size: 150%; } }
+
+@media only screen and (max-width: 764px) {
   /*modificaciones del index*/
   .container {
     display: grid;
-    grid-template-columns: 0.3fr 1.7fr 0,3fr;
+    grid-template-columns: 0.3fr 1.7fr;
     grid-template-rows: 0,3fr;
     grid-template-areas: "logohospital tituloprincipal logohospital2";
     gap: 0px 0px;
     grid-auto-flow: row; }
     .container .tituloprincipal {
-      font-size: 45%; }
+      font-size: 45%;
+      text-align: center; }
     .container img {
-      width: 45%;
-      height: 45%; }
+      width: 30px;
+      height: 40px; }
     .container .logohospital2 {
       display: flex;
       justify-content: end; }
@@ -159,36 +116,12 @@ footer {
     display: grid;
     grid-auto-columns: 1fr;
     grid-template-columns: 2fr;
-    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0,2fr 0,2fr;
     gap: 0px 0px;
-    grid-template-areas: "menuprincipalfoto1" "menuprincipaltitulo1" "menuprincipalfoto2" "menuprincipaltitulo2" "menuprincipalfoto3" "menuprincipaltitulo3"; }
+    grid-template-areas: "menuprincipalfoto1" "menuprincipaltitulo1" "menuprincipalfoto2" "menuprincipaltitulo2" "menuprincipalfoto3" "menuprincipaltitulo3" "menuprincipalfoto4" "menuprincipaltitulo4"; }
   .menuprincipal img {
     width: auto;
     height: auto; }
-  /*r1 pagina*/
-  .mainr1fotos {
-    display: flex;
-    justify-items: center; }
-    .mainr1fotos:hover {
-      border: 2px solid #ffffff; }
-  .mainr1rotaciones {
-    transform: scale(1.2, 1); }
-  .menupagina {
-    transform: scale(1, 1.1); } }
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .Menuprincipal {
-    display: flex;
-    justify-items: center;
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-template-columns: 2fr;
-    grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
-    gap: 0px 0px;
-    grid-template-areas: "menuprincipalfoto1" "menuprincipaltitulo1" "menuprincipalfoto2" "menuprincipaltitulo2" "menuprincipalfoto3" "menuprincipaltitulo3"; }
-  .menuprincipal img {
-    width: 75px;
-    height: 95px; } }
-
-.Bodyresidentessegundo {
-  background-color: black; }
+  /*body del resto de las paginas con bootstrap*/
+  .Bodyresidentessegundo {
+    background-color: #000; } }

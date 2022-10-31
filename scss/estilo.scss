@@ -40,8 +40,7 @@ body{
         text-align: center;
         background-color: $blanco;
         font-size: 125%;
-        &:hover{
-        transform: scale(2,1); 
+    
         }
     }
     .logohospital {
@@ -59,7 +58,7 @@ body{
         }
     }
 
-}
+
 
 
 .Menuprincipal{
@@ -67,12 +66,13 @@ body{
         display: grid; 
         grid-auto-columns: 1fr; 
         grid-template-columns: 0.3fr 1.7fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr; 
         gap: 0px 0px; 
         grid-template-areas: 
           "menuprincipalfoto1 menuprincipaltitulo1"
           "menuprincipalfoto2 menuprincipaltitulo2"
           "menuprincipalfoto3 menuprincipaltitulo3"
+          "menuprincipalfoto4 menuprincipaltitulo4"
 
 }
 .Menuprincipal {
@@ -106,104 +106,49 @@ footer {
     text-align: center;
 }
 
-/*Residentes de primer año*/
 
-.mainr1 {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-items: center;
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "mainr1rotaciones"
-      "calendario "
-}
-
-.calendario {
-    animation-duration: 2seg;
-    animation-name: aparecer;
-    animation-iteration-count: infinite;
-}
-
-.mainr12 {
-    display: flex;
-    justify-items: center;   
-    display: grid; 
-    grid-auto-columns: 1fr; 
-    grid-template-columns: 2fr; 
-    grid-template-rows: 0,2fr 1fr 0,8fr; 
-    gap: 0px 0px; 
-    grid-template-areas:
-        "titulodemainr12 "
-      "mainr1fotos"
-      "Contenedormenu "
-
-
-}
-
-.mainr1fotos {
-    display: flex;
-    justify-items: flex-start;
-    img{
-        height: 145px;
-        width: 125px;
-        border: 2px solid white;
-        transition: all 2s;
-        &:hover {
-            height: $imagenmobileancho/2;
-            width: ($imagenmobileancho/2)-25;
-
-        }
-    }
-    
-   
-}
-
-
-.Contenedormenu{
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    color: black;
-
-
-    ul{
-        display: flex;
-        justify-content: start;
-        background-color: black;
-    }
-
-    li{
-    border: 2px solid white;
-    text-decoration: none;
-
-    }
-    a{
-    text-decoration: none;
-    color:  $blanco;
-        &:hover{
-        color:  $negro;
-        background-color: grey;
-        }
-    }
-
-    
-}
 /*paginas de segundo y tercero*/
 .Bodyresidentessegundo {
     background-color: $negro;
 }
 
 /* adaptaciones a dispositivos*/
-@media screen and (max-width: $mobile) {
+@media (max-width: $desktop){
+    .Menuprincipal{
+        display: flex;
+        justify-items: center;
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 0,8fr 0,8fr 0,8fr 0,8fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "menuprincipalfoto1 menuprincipaltitulo1"
+          "menuprincipalfoto2 menuprincipaltitulo2"
+          "menuprincipalfoto3 menuprincipaltitulo3"
+          "menuprincipalfoto4 menuprincipaltitulo4"
+        
+        }
+    .Menuprincipal {
+                
+        img{
+            width: 1fr;
+            height: 1fr;
+
+            
+        }
+        a{
+            font-size: 150%;
+            
+        }
+    }
+    
+}
+@media only screen and (max-width: $mobile) {
     /*modificaciones del index*/
 .container{
     display: grid;
-    grid-template-columns: 0.3fr 1.7fr 0,3fr;
+    grid-template-columns: 0.3fr 1.7fr;
     grid-template-rows: 0,3fr;
     grid-template-areas: 
     "logohospital tituloprincipal logohospital2";
@@ -212,28 +157,26 @@ footer {
     
     .tituloprincipal{
     font-size: 45%;
+    text-align: center;
     }
 
     img {
-        width: 45%;
-        height: 45%;
-    }
+       width: 30px;
+       height: 40px;
+       }
     .logohospital2{
         display: flex;
         justify-content: end;
     }
  
-}
-
-
-    
+}  
     .Menuprincipal{
         display: flex;
         justify-items: center;
         display: grid; 
         grid-auto-columns: 1fr; 
         grid-template-columns: 2fr; 
-        grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr; 
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0,2fr 0,2fr; 
         gap: 0px 0px; 
         grid-template-areas: 
           "menuprincipalfoto1"
@@ -242,6 +185,8 @@ footer {
           "menuprincipaltitulo2"
           "menuprincipalfoto3"
           "menuprincipaltitulo3"
+          "menuprincipalfoto4"
+          "menuprincipaltitulo4"
     
       }
       
@@ -250,58 +195,9 @@ footer {
         height: auto;
         
     }
-    
-    /*r1 pagina*/
-    .mainr1fotos {
-        display: flex;
-        justify-items: center;
-        &:hover{
-            border:2px solid #ffffff;
-        }
-       
-    }
-    .mainr1rotaciones{
-
-        transform: scale(1.2,1);
-
-    }
-    
-    
-    .menupagina{
-        transform: scale(1,1.1);
-    }
-
-    }
-
-
-    @media screen and (min-width: 768px ) and (max-width: $desktop) {
-              .Menuprincipal{
-            display: flex;
-            justify-items: center;
-            display: grid; 
-            grid-auto-columns: 1fr; 
-            grid-template-columns: 2fr; 
-            grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr; 
-            gap: 0px 0px; 
-            grid-template-areas: 
-              "menuprincipalfoto1"
-              "menuprincipaltitulo1"
-              "menuprincipalfoto2"
-              "menuprincipaltitulo2"
-              "menuprincipalfoto3"
-              "menuprincipaltitulo3"
-        
-          }
-          
-        .menuprincipal img{
-            width: 75px;
-            height: 95px;
-            
-        }
-        
-              }
-    
-
+  
+/*body del resto de las paginas con bootstrap*/
 .Bodyresidentessegundo {
-    background-color: black;
+    background-color:$negro;
+}
 }
